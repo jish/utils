@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'tiny_http'
+require 'json'
+
+endpoint = "http://www.readability.com/api/shortener/v1/urls"
+url = ARGV.first
+
+response = TinyHttp.new.post(endpoint, { url: url })
+meta = JSON.load(response.body)["meta"]
+
+# {
+#   "url"=>"/api/shortener/v1/urls/y4agewdp",
+#   "rdd_url"=>"http://rdd.me/y4agewdp",
+#   "id"=>"y4agewdp"
+# }
+
+puts "http://www.readability.com/articles/#{meta["id"]}?readbar=1"

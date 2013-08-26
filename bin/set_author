@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+
+authors = YAML.load(File.read(File.expand_path('~/.authors.yml')))
+context = ARGV.shift || "os"
+
+system('git', 'config', 'user.name', authors[:name])
+system('git', 'config', 'user.email', authors[context][:email])
+system('git', 'commit', '--amend', '--reset-author')

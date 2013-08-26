@@ -1,0 +1,36 @@
+#!/usr/bin/env ruby
+
+DEBUG = false
+minutes = (ARGV.shift || 25).to_i
+title = "Pomodoro"
+message = "#{minutes} minutes"
+
+def log(message)
+  puts message if DEBUG
+end
+
+log("parent pid: #{Process.pid}")
+
+if fork
+  parent = true
+  process_name = "parent"
+else
+  child = true
+  process_name = "child"
+end
+
+if child
+
+  sleep minutes * 60
+  File.open("/dev/null", "w") do |file|
+    args = ["terminal-notifier", "-message", message, "-title", title, "-group", "pomodoro"]
+    system(*args, :out => file.fileno)
+  end
+
+else
+
+  puts "Started a #{minutes} minute pomodoro #{Time.now}"
+
+end
+
+log("end #{process_name}")
