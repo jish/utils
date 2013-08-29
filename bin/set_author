@@ -15,4 +15,11 @@ context = ARGV.shift || "os"
 
 system('git', 'config', 'user.name', authors[:name])
 system('git', 'config', 'user.email', authors[context][:email])
-system('git', 'commit', '--amend', '--reset-author')
+
+puts "Author set to: #{authors[:name]} <#{authors[context][:email]}>"
+print "Amend last commit? [yN]: "
+answer = gets
+
+if answer =~ /^y/i
+  system('git', 'commit', '--amend', '--reset-author')
+end
