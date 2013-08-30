@@ -1,0 +1,6 @@
+
+# Show the date in the clock, and use 24-hour format
+defaults write com.apple.menuextra.clock "DateFormat" 'EEE MMM d  H:mm'
+
+# Show the TextMate file drawer on the left
+defaults write com.macromates.TextMate.preview "fileBrowserPlacement" 'left'
