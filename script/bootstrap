@@ -20,3 +20,12 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Hide the dock
 defaults write com.apple.dock autohide -bool true
+
+
+
+# Keyboard Shortcuts
+
+
+
+# ⌘K clears the window in Adium
+defaults write com.adiumX.adiumX "NSUserKeyEquivalents" '{ "Clear Display" = "@k"; }'
