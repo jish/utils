@@ -14,3 +14,4 @@ install_package "msmtp"
 install_package "mutt"
 
 install_package "cowsay"
+install_package "todo-txt"
