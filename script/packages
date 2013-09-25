@@ -15,3 +15,7 @@ install_package "mutt"
 
 install_package "cowsay"
 install_package "todo-txt"
+
+# chruby
+install_package "ruby-install"
+install_package "chruby"
