@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+if [ ! -f ~/.vim/colors/solarized.vim ]; then
+  echo "No colors"
+
+  color_dir="${HOME}/.vim/colors"
+  if [ ! -d $color_dir ]; then
+    echo "Creating ${color_dir}"
+    mkdir -p $color_dir
+  else
+    echo "${color_dir} exists ✓"
+  fi
+
+  solarized_dir="${HOME}/code/solarized"
+  if [ ! -d $solarized_dir ]; then
+    echo "Cloning solarized color scheme from GitHub..."
+    git clone git://github.com/altercation/solarized.git $HOME/code/solarized
+  fi
+
+  cd $color_dir
+  ln -s "${solarized_dir}/vim-colors-solarized/colors/solarized.vim"
+fi
+
+if [ -f ~/.vim/colors/solarized.vim ]; then
+  echo "Solarized color scheme added to vim ✓"
+fi
