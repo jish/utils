@@ -8,7 +8,6 @@ install_package() {
 }
 
 # For mutt
-install_package "curl-ca-bundle"
 install_package "offlineimap"
 install_package "msmtp"
 install_package "mutt"
@@ -21,3 +20,5 @@ install_package "ghi"
 # chruby
 install_package "ruby-install"
 install_package "chruby"
+
+install_package "node"
