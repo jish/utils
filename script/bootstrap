@@ -29,3 +29,5 @@ defaults write com.apple.dock autohide -bool true
 
 # ⌘K clears the window in Adium
 defaults write com.adiumX.adiumX "NSUserKeyEquivalents" '{ "Clear Display" = "@k"; }'
+
+bash ./script/npm

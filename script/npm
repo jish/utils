@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+install_package() {
+  npm install --global $1
+}
+
+which npm > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+  echo "Installing npm"
+  brew install node
+else
+  echo "npm found"
+fi
+
+install_package vault
+install_package ember-cli
+install_package jshint
