@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+dotfiles_dir="${HOME}/.dotfiles"
+if [ ! -d $dotfiles_dir ]; then
+  echo "No dotfiles"
+  git clone git://github.com/jish/dotfiles.git $dotfiles_dir
+
+  cd $dotfiles_dir
+  rake install
+fi
+
