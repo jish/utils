@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
 install_package() {
-  npm install --global $1
+  npm list --global $1 > /dev/null 2>&1
+  if [ $? -ne 0 ]; then
+    npm install --global $1
+  else
+    echo "npm: ${1} ✓"
+  fi
 }
 
 which npm > /dev/null 2>&1
