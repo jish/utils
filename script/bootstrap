@@ -1,33 +1,8 @@
+#!/usr/bin/env bash
 
-# Show the date in the clock, and use 24-hour format
-defaults write com.apple.menuextra.clock "DateFormat" 'EEE MMM d  H:mm'
+rake install
 
-# Show the TextMate file drawer on the left
-defaults write com.macromates.TextMate.preview "fileBrowserPlacement" 'left'
-
-# Tab through all controls on OS X
-defaults write NSGlobalDomain "AppleKeyboardUIMode" -int 3
-
-# Show remaining battery time
-defaults write com.apple.menuextra.battery ShowTime -string "YES"
-
-# Enable tap to click on the trackpad
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-
-# Ask for password when coming back from screensaver
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
-
-# Hide the dock
-defaults write com.apple.dock autohide -bool true
-
-
-
-# Keyboard Shortcuts
-
-
-
-# ⌘K clears the window in Adium
-defaults write com.adiumX.adiumX "NSUserKeyEquivalents" '{ "Clear Display" = "@k"; }'
-
-bash ./script/npm
+./script/dotfiles
+./script/setup_shell
+./script/packages
+./script/npm
