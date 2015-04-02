@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
 install_package() {
-  brew cask install $1
+  brew cask list $1 > /dev/null 2>&1
+  if [ $? -ne 0 ]; then
+    brew cask install $1
+  else
+    echo "cask: ${1} ✓"
+  fi
 }
 
 brew cask > /dev/null 2>&1
@@ -14,3 +19,4 @@ fi
 
 install_package iterm2
 install_package textmate
+install_package firefox

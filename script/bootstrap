@@ -8,3 +8,4 @@ rake install
 
 ./script/packages
 ./script/npm
+./script/cask
