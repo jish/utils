@@ -9,6 +9,8 @@ install_package() {
   brew list $1 > /dev/null
   if [ $? -ne 0 ]; then
     brew install $1
+  else
+    echo "brew: ${1} ✓"
   fi
 }
 
