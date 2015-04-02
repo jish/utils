@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
-chsh -s `which zsh`
-touch ~/.localrc
+echo $SHELL | grep zsh > /dev/null
+if [ $? -ne 0 ]; then
+  chsh -s `which zsh`
+  touch ~/.localrc
+fi
 
