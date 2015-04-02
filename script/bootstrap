@@ -4,5 +4,7 @@ rake install
 
 ./script/dotfiles
 ./script/setup_shell
+./script/setup_vim
+
 ./script/packages
 ./script/npm

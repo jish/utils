@@ -11,10 +11,10 @@ if [ ! -f ~/.vim/colors/solarized.vim ]; then
     echo "${color_dir} exists ✓"
   fi
 
-  solarized_dir="${HOME}/code/solarized"
+  solarized_dir="${HOME}/code/utils/solarized"
   if [ ! -d $solarized_dir ]; then
     echo "Cloning solarized color scheme from GitHub..."
-    git clone git://github.com/altercation/solarized.git $HOME/code/solarized
+    git clone git://github.com/altercation/solarized.git $solarized_dir
   fi
 
   cd $color_dir
