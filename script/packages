@@ -29,3 +29,4 @@ install_package "ruby-install"
 install_package "chruby"
 
 install_package "node"
+install_package "ack"
