@@ -18,5 +18,6 @@ else
 fi
 
 install_package iterm2
-install_package textmate
 install_package firefox
+install_package slack
+install_package textmate
