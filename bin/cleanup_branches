@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+branches=$(git branch --merged | grep -v master)
+count=0
+
+for i in $branches; do
+  count=$((count + 1))
+  echo $i
+done
+
+read -n1 -p "Cleanup $count branches? [yN]"
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  echo
+  git branch -d $branches
+fi
