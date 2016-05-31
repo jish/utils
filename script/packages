@@ -28,5 +28,6 @@ install_package "ghi"
 install_package "ruby-install"
 install_package "chruby"
 
-install_package "node"
 install_package "ack"
+install_package "gpg2"
+install_package "node"
