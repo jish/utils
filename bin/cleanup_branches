@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-branches=$(git branch --merged | grep -v master)
+branches=$(git branch --merged | grep -v master | grep -v "*")
 count=0
 
 for i in $branches; do
