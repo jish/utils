@@ -11,7 +11,9 @@ if [ ! -f ~/.vim/colors/solarized.vim ]; then
     echo "${color_dir} exists ✓"
   fi
 
-  solarized_dir="${HOME}/code/utils/solarized"
+  repo_dir=$(git rev-parse --show-toplevel)
+  parent_dir=$(dirname $repo_dir)
+  solarized_dir="${parent_dir}/solarized"
   if [ ! -d $solarized_dir ]; then
     echo "Cloning solarized color scheme from GitHub..."
     git clone git://github.com/altercation/solarized.git $solarized_dir
