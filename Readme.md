@@ -18,6 +18,12 @@ Install all of the binaries in the `bin/` directory to `~/bin`:
 
     rake install
 
+Bootstrap a new machine:
+
+    ./script/bootstrap
+
+#### Run single one off scripts:
+
 Install homebrew packages:
 
     ./script/packages
