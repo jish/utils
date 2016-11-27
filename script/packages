@@ -22,7 +22,6 @@ install_package "mutt"
 install_package "cowsay"
 install_package "todo-txt"
 install_package "jq"
-install_package "ghi"
 
 # chruby
 install_package "ruby-install"

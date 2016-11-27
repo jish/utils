@@ -17,9 +17,9 @@ else
   echo "Brew cask found"
 fi
 
-install_package chromium
 install_package iterm2
 install_package firefox
 install_package slack
 install_package spectacle
 install_package textmate
+install_package thunderbird

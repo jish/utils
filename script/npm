@@ -18,5 +18,3 @@ else
 fi
 
 install_package vault
-install_package ember-cli
-install_package jshint
