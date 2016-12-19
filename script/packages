@@ -27,6 +27,6 @@ install_package "jq"
 install_package "ruby-install"
 install_package "chruby"
 
-install_package "ack"
+install_package "the_silver_searcher"
 install_package "gpg2"
 install_package "node"
