@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [[ -z $1 ]]; then
+  sentences=2
+else
+  sentences=$1
+fi
+
+curl "http://metaphorpsum.com/sentences/${sentences}"
