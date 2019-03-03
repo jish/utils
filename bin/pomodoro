@@ -9,6 +9,11 @@ def log(message)
   puts message if DEBUG
 end
 
+if !system("which", "terminal-notifier", out: "/dev/null")
+  STDOUT.puts "terminal-notifier is not installed, can not notify"
+  exit 1
+end
+
 log("parent pid: #{Process.pid}")
 
 if fork
