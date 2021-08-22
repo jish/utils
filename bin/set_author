@@ -7,7 +7,8 @@ authors = File.expand_path('~/.authors.yml')
 if !File.exist?(authors)
   template = { :name => "Author Name", "os" => { :email => "foo@example.com" } }
   STDERR.puts "No ~/.authors.yml found, use this as a template:\n"
-  abort YAML.dump(template)
+  puts YAML.dump(template)
+  exit 1
 end
 
 authors = YAML.load(File.read(authors))
