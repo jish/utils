@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+max = ARGV.first ? ARGV.first.to_i : 1_000
+
+puts rand(max)
